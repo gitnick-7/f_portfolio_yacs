@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barnik Sarkar - YCSAS Intern Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="mode-toggle" onclick="toggleDarkMode()">🌙</button>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#ycsas">YCSAS</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="container">
+            <div>
+                <h1>Barnik Sarkar</h1>
+                <p>Intern at <strong>YCSAS</strong></p>
+                <button class="cta-btn" onclick="scrollToSection('about')">Explore My Profile</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div>
+                    <p>Hello!!<br> 
+                        I'm Barnik Sarkar, a passionate Computer Science and Technology student in Central Calcutta Polytechnic  with a keen interest in web development and modern technologies. 
+                        Currently an intern at YCSAS, where I'm transforming my theoretical knowledge into practical skills.</p><br>
+                    <p><strong>Career Goals:</strong> Aspire to become a Software Developer specializing in scalable  applications. Aim to work with cutting-edge technologies and contribute to innovative projects that impact millions of users.</p><br>
+                    <p><strong>Why YCSAS:</strong> Joined YCSAS Internship to gain real-world experience, work on live projects, and learn from industry experts. The hands-on approach and mentorship have been invaluable to my growth.</p>
+                </div>
+                <div class="about-img">
+                    <img src="img1.jpeg" alt="Barnik Sarkar">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="fade-in">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card" onclick="showSkillDetail('HTML/CSS')">
+                    <div class="skill-icon">🎨</div>
+                    <h3>HTML & CSS</h3>
+                    <p>Responsive design & modern layouts</p>
+                </div>
+                <div class="skill-card" onclick="showSkillDetail('JavaScript')">
+                    <div class="skill-icon">🇯‌🇸‌</div>
+                    <h3>JavaScript</h3>
+                    <p>Interactive features & DOM manipulation</p>
+                </div>
+                <div class="skill-card" onclick="showSkillDetail('Git')">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Git & GitHub</h3>
+                    <p>Version control & collaboration</p>
+                </div>
+                <div class="skill-card" onclick="showSkillDetail('UI/UX')">
+                    <div class="skill-icon">⚛</div>
+                    <h3>React</h3>
+                    <p>Modern design using react</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ycsas" class="fade-in">
+        <div class="container">
+            <h2>YCSAS Internship</h2>
+            <div class="ycsas-highlight">
+                <h3>🌟 YCSAS Internship 2025</h3>
+                <ul>
+                    <li><strong>Topics Learned:</strong> HTML, CSS, JavaScript , Web Design, Git Workflow</li>
+                    <li><strong>Key Projects:</strong> 5+ mini projects, Portfolio development, Interactive components</li>
+                    <li><strong>Experience Gained:</strong> Agile methodology, Code reviews, Real client requirements, Quick revaluating codes </li>
+                    <li><strong>Mentorship:</strong> Weekly sessions with industry working experts</li>
+                </ul>
+                <p><em>"YCSAS internship transformed me from a beginner to a confident developer ready for industry challenges."</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="fade-in">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img">📱 Interactive Todo List</div>
+                    <div class="project-content">
+                        <h3>Todo List 📋</h3>
+                        <p>Built a fully functional todo list with add/delete. Learned DOM manipulation and event handling.</p>
+                        <button onclick="showProjectModal('todo')">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img"> 🌐 A Marketing Website </div>
+                    <div class="project-content">
+                        <h3>Webpage for a Smartphone Company</h3>
+                        <p>Real-time website consuming public API for a smartphone company called "ROGE PHONE". Implemented responsive design and enhanced UX.</p>
+                        <button onclick="showProjectModal('Marketing')">View Details</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">🗂️ Portfolio Site</div>
+                    <div class="project-content">
+                        <h3>This Portfolio</h3>
+                        <p>Current project showcasing all YCSAS internship learnings. Features dark mode, smooth scrolling, form validation, and responsive design.</p>
+                        <button onclick="showProjectModal('portfolio')">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p><strong>📧 Email:</strong> barniks45@gmail.com</p>
+                    <p><strong>💻 GitHub:</strong> https://github.com/gitnick-7</p>
+                    <p><strong>💼 LinkedIn:</strong>linkedin.com/in/barniksarkar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
